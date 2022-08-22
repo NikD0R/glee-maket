@@ -1,11 +1,11 @@
 @import "vars";
 @import "fonts";
 @import "reset";
+@import "libs";
 @import "global";
 
 .header {
   padding: 60px 0 68px;
-
   &__inner {
     display: flex;
     justify-content: space-between;
@@ -77,7 +77,7 @@
     border-radius: 25px;
     width: 178px;
     height: 50px;
-    background-color:  #fcd7b6;
+    background-color:  $bg;
     top: 50%;
     left: 50%;
     transform: translate(-54%, -55%);
@@ -204,5 +204,83 @@
   }
 }
 
+.top-slider {
+  background-color: $bg;
+  background-image: url('../images/sliderbg.png');
+  background-repeat: no-repeat;
+  background-position: right;
+  padding-top: 95px;
+  &__container {
+    max-width: 1250px;
+  }
+  &__item {
+    display: flex !important;
+    justify-content: space-between;
+  }
+  &__content {
+    padding-top: 120px;
+  }
+  &__title {
+    max-width: 420px;
+    font-size: 72px;
+    line-height: 70px;
+    @extend %rubik-500;
+    margin-bottom: 35px;
+    text-transform: uppercase;
+  }
+  &__text {
+    font-size: 18px;
+    line-height: 30px;
+    color: $header-nav;
+    max-width: 370px;
+    margin-bottom: 40px;
+  }
+  &__link {
+    padding: 20px 15px 20px 22px;
+    background-color: $button;
+    color: #fff;
+    font-size: 15px;
+    line-height: 12px;
+    text-align: center;
+    @extend %rubik-500;
+  } 
+  &__link-img {
+    padding-left: 50px;
+    display: inline !important;
+  }
+  .slick-dots {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 40px;
+    padding-top: 200px;
+    li {
+      padding: 0 8px;
+      button {
+        color: $default;
+        font-size: 10px;
+        line-height: 12px;
+        text-align: center;
+        @extend %rubik-500;
+        background-color: #fff;
+        opacity: 0.302;
+        border-radius: 50%;
+        border: none;
+        width: 30px;
+        height: 30px;
+      }
+      &.slick-active {
+        button {
+          background-color: #fff;
+          opacity: 1;
+        }
+      }
+    }
+    
+  }
+  &__img {
+    padding-top: 180px;
+    height: 100%;
+  }
+}
 
 @import "media";
