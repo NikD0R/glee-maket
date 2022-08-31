@@ -206,7 +206,7 @@
 
 .top-slider {
   background-color: $bg;
-  background-image: url('../images/sliderbg.png');
+  background-image: url('../images/slider/sliderbg.png');
   background-repeat: no-repeat;
   background-position: right;
   padding-top: 95px;
@@ -282,5 +282,207 @@
     height: 100%;
   }
 }
+
+.info {
+  display: flex;
+  justify-content: space-around;
+  background-color: #fef7f0;
+  &__item { 
+    padding: 55px 0 45px;
+    // width: 300px;
+    position: relative;
+  }
+  &__item::before {
+    content: '';
+    position: absolute;
+    top: 62px;
+    left: -60px;
+    width: 52px;
+    height: 53px;
+  }
+  &__item--time::before {
+    background-image: url('../images/icons/time.svg');
+    background-repeat: no-repeat;
+  }
+  &__item--delivery::before {
+    background-image: url('../images/icons/delivery.svg');
+    background-repeat: no-repeat;
+    top: 72px;
+    width: 54px;
+    height: 37px;
+  }
+  &__item--secure::before {
+    background-image: url('../images/icons/secure.svg');
+    background-repeat: no-repeat;
+    width: 54px;
+    height: 54px;
+    top: 65px;
+  }
+  &__item-title {
+    font-size: 18px;
+    line-height: 40px;
+    @extend %dmsans-700;
+    color: #414141;
+    padding-left: 20px;
+  }
+  &__item-text {
+    font-size: 16px;
+    line-height: 30px;
+    @extend %dmsans-400;
+    color: #585858;
+    padding-left: 20px;
+    max-width: 220px;
+  }
+  &__item-text--delivery {
+    max-width: 235px;
+  }
+  &__item-text--secure {
+    max-width: 230px;
+  }
+}
+
+.products {
+  padding: 75px 0 100px;
+  &__filter-btn {
+    text-align: center;
+    margin-bottom: 80px;
+  }
+  &__btn {
+    @extend %dmsans-700;
+    color: #8b8b8b;
+    border: none;
+    background-color: transparent;
+    margin-right: 30px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  .mixitup-control-active {
+    color: $title;
+  }
+  &__content {
+    min-height: 800px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 30px;
+    padding-bottom: 85px;
+  }
+  &__content-item {
+    background-color: #fff;
+    width: 270px;
+    height: 380px;
+    box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 45px 40px;
+  }
+  &__content-img {
+    margin-bottom: 60px;
+  }
+  &__content-item--chair {
+    padding-top: 35px;
+  }
+  &__content-img--chair {
+    margin-bottom: 40px;
+  }
+  &__content-item--white-chair,
+  &__content-item--retro-table {
+    padding-top: 60px;
+  }
+  &__content-img--white-chair {
+    margin-bottom: 80px;
+  }
+  &__content-item--table {
+    padding-top: 80px;
+  }
+  &__content-img--table {
+    margin-bottom: 95px;
+  }
+  &__content-item--sofa-radio {
+    padding-top: 55px;
+  }
+  &__content-img--sofa-radio, 
+  &__content-img--wood-chair,
+  &__content-img--round-chair,
+  &__content-img--retro-table { 
+    margin-bottom: 100px;
+  }
+  &__content-item--wood-chair {
+    padding-top: 45px;
+  }
+  &__content-item--round-chair {
+    padding-top: 50px;
+  }
+  &__content-title {
+    font-size: 16px;
+    line-height: 40px;
+    @extend %dmsans-500;
+  }
+  &__content-text {
+    font-size: 16px;
+    line-height: 40px;
+    @extend %dmsans-700;
+    color: $button;
+    margin-bottom: 40px;
+  }
+
+  &__lighting {
+    display: flex;
+    padding-bottom: 100px;
+  }
+  &__lighting-item {
+    background: rgb(252, 215, 182, 0.4);
+    width: 870px;
+    height: 390px;
+    display: flex;
+    padding-right:  140px;
+    position: relative;
+  }
+  &__lighting-item + .products__lighting-item {
+    margin-left: 18px;
+  }
+  &__lighting-img--cat {
+    padding-left: 62px;
+    bottom: 80px;
+    position: absolute;
+  }
+  &__lighting-img--studio {
+    padding-left: 80px;
+    bottom: 85px;
+    position: absolute;
+  }
+  &__lighting-descr {
+    padding: 100px 0;
+    max-width: 400px;
+    margin-left: 350px;
+  }
+  &__lighting-title {
+    font-size: 26px;
+    @extend %dmsans-700;
+    margin-bottom: 30px;
+  }
+  &__lighting-text {
+    font-size: 16px;
+    line-height: 30px;
+    margin-bottom: 35px;
+  }
+  &__lighting-link {
+    border: 1px solid rgb(67, 99, 114, 0.4);
+    border-radius: 5px;
+    background-color: transparent;
+    color: $header-nav;
+    font-size: 15px;
+    line-height: 12px;
+    @extend %rubik-500;
+    padding: 20px 20px;
+    text-align: center;
+  }
+  &__link-img {
+    display: inline;
+    padding-left: 40px;
+  }
+}
+
 
 @import "media";
