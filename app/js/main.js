@@ -8,5 +8,6 @@ $(function(){
   });
   
   var mixer = mixitup('.products__content');
+  var mix = mixitup('.design__content');
 
 })
