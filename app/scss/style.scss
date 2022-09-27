@@ -675,4 +675,123 @@
   align-items: center;
 }
 
+.articles {
+  padding: 120px 0;
+
+
+  .title {
+    margin-bottom: 45px;
+    text-align: left;
+  }
+
+  &__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  &__link {
+    font-size: 16px;
+    @extend %dmsans-700;
+    color: #262626;
+    position: relative;
+  }
+
+  &__link::after {
+    content: '';
+    position: absolute;
+    background-image: url('../images/icons/arrow-article.svg');
+    background-repeat: no-repeat;
+    width: 6px;
+    height: 11px;
+    top: 10px;
+    right: -18px;
+  }
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+  }
+
+  &__item-linkimg {
+    display: block;
+    img {
+      height: 250px;
+      object-fit: cover;
+    }
+  }
+
+  &__item-box {
+    padding: 35px 30px 30px;
+    position: relative;
+  }
+
+  &__item-link {
+    line-height: 20px;
+    @extend %poppins-700;
+    color: #ffffff;
+    background-color: $button;
+    border-radius: 25px;
+    text-transform: uppercase;
+    padding: 8px 35px;
+    bottom: 198px;
+    z-index: 1;
+    position: absolute;
+  } 
+
+  &__item-text {
+    max-width: 300px;
+    font-size: 18px;
+    line-height: 26px;
+    @extend %dmsans-500;
+    color: #262626;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  &__item-text--third {
+    padding-bottom: 45px;
+  }
+
+  &__item-text--second {
+    padding-bottom: 18px;
+  }
+
+  &__item-info {
+    padding-top: 20px;
+  }
+
+  &__item-date,
+  &__item-author {
+    font-size: 12px;
+    line-height: 30px;
+    color: #222933;
+  }
+
+  &__item-author {
+    margin-left: 30px;
+  }
+}
+
+.articles-partners {
+  position: relative;
+}
+
+.partners {
+  background-color: rgb(252, 215, 182, .2);
+  // padding-top: 260px;
+
+  ul.partners__list {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 120px 0;
+    margin-bottom: 50px;
+  }
+}
+
+
+
 @import "media";
